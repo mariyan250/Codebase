@@ -1,6 +1,6 @@
 body {
   background: #000;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 h1 {
   position: relative;
@@ -21,8 +21,6 @@ p {
   width: 90%;
   margin: 40px auto;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 button {
   margin: 20px;

@@ -1,0 +1,166 @@
+:root {
+  --main_color : rgb(86, 86, 245);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #212121;   
+}
+.button_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 13rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+}
+/* button 1 style */
+.special_sytle_button  {
+  position: relative;
+  color: var(--main_color );
+  border: 2px solid var(--main_color );
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px 35px;
+  transition: .3s;
+  overflow: hidden;
+  z-index: 2;
+}
+.special_sytle_button::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: var(--main_color );
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  transition: .3s;
+  z-index: -1;
+  border-radius: 10px;
+}
+.special_sytle_button:hover:before {
+  width: 150%;
+  height: 150%;
+}
+.special_sytle_button:hover {
+  color: #fff;
+}
+
+/* button 2 style */
+.special_sytle_button_2 {
+  position: relative;
+  color: var(--main_color );
+  border: 2px solid var(--main_color );
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px 35px;
+  transition: .3s;
+  overflow: hidden;
+  z-index: 2;
+}
+.special_sytle_button_2::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main_color );
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: .3s;
+  z-index: -1 ;
+}
+.special_sytle_button_2::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main_color );
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: .3s;
+  z-index: -1 ;
+}
+.special_sytle_button_2:hover{
+  color: #fff;
+}
+.special_sytle_button_2:hover::before ,
+.special_sytle_button_2:hover::after {
+  width: 51%;
+  height: 200%;
+  border-radius: 0;
+}
+.special_sytle_button_2:hover::before{
+  left: 0 ;
+}
+.special_sytle_button_2:hover::after {
+  right: 0 ;
+}
+
+/* button 3 style */
+.special_sytle_button_3 {
+  position: relative;
+  color: var(--main_color );
+  border: 3px solid var(--main_color );
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 10px 35px;
+  overflow: hidden;
+  transition: .3s;
+  z-index: 2;
+}
+.special_sytle_button_3::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: var(--main_color);
+  left: -2px;
+  top: 0;
+  transform: translateY(-50%);
+  transition: .3s;
+  z-index: -1;
+}
+.special_sytle_button_3::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: var(--main_color);
+  right: -2px;
+  top: 0;
+  transform: translateY(-50%);
+  transition: .3s;
+  z-index: -1;
+}
+.special_sytle_button_3:hover::before {
+  width: 70px;
+  left: -35px;
+  top: -30%;
+  transform: rotate(125deg);
+}
+.special_sytle_button_3:hover::after {
+  width: 70px;
+  right: -41px;
+  top: 7%;
+  transform: rotate(-235deg);
+}

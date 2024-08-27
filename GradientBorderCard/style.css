@@ -1,0 +1,51 @@
+.gradient-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  max-width: 22em;
+  position: relative;
+  padding: 10% 2em;
+  box-sizing: border-box;
+  color: #FFF;
+  background: #000;
+  background-clip: padding-box;
+  border: solid 5px transparent;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.gradient-box:hover {
+  transform: scale(1.05)
+}
+
+.gradient-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: linear-gradient(to right, red, orange);
+}
+
+html {
+  height: 100%;
+  background: #212121;
+  display: flex;
+  font-family: sans-serif;
+  line-height: 1.25
+}
+
+body {
+  margin: auto;
+}
+
+p {
+  color: #ccc;
+}
